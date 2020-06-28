@@ -1,0 +1,34 @@
+ul.pagination
+  if page === 1
+    li.page-item
+      a.page-link(href='?#') &laquo;
+    li.page-item
+      a.page-link.bg-primary.text-light(href='?page=' + page)= page
+    li.page-item
+      a.page-link(href=`?page=${page + 1}`)= page + 1
+    li.page-item
+      a.page-link(href='?page=' + (page + 2))= page + 2
+    li.page-item
+      a.page-link(href='?page=' + (page + 1)) &raquo;
+  else if page === maxPage
+    li.page-item
+      a.page-link(href='?page=' + (page - 1)) &laquo;
+    li.page-item
+      a.page-link(href='?page=' + (page - 2))= page - 2
+    li.page-item
+      a.page-link(href=`?page=${page - 1}`)= page - 1
+    li.page-item
+      a.page-link.bg-primary.text-light(href='?page=' + page)= page
+    li.page-item
+      a.page-link(href='#') &raquo;
+  else
+    li.page-item
+      a.page-link(href='?page=' + (page - 1)) &laquo;
+    li.page-item
+      a.page-link(href=`?page=${page - 1}`)= page - 1
+    li.page-item
+      a.page-link.bg-primary.text-light(href=`?page=${page}`)= page
+    li.page-item
+      a.page-link(href=`?page=${page + 1}`)= page + 1
+    li.page-item
+      a.page-link(href=`?page=${page + 1}`) &raquo;

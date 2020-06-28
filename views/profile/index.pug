@@ -1,0 +1,25 @@
+extends ../layouts/common
+
+block content
+  .row
+    .col-4
+      .wrap-profile
+          img.img-profile(src= user.avatarUrl ? user.avatarUrl : 'https://picsum.photos/id/1/200')
+    .col-8.ml-auto
+      form(action='/profile/avatar', method='POST', enctype="multipart/form-data")
+        .form-group
+          label(for='name') Name
+          input#name.form-control(type='text', value= user.name, name='name', readonly)
+        .form-group
+          label(for='email') Email
+          input#email.form-control(type='text', value= user.email, readonly)
+        .form-group
+          label(for='password') New password
+          input#password.form-control(type='password', name='password')
+        .input-group.mb-3
+          .input-group-prepend
+            span#inputGroupFileAddon01.input-group-text Avatar
+          .custom-file
+            input#inputGroupFile01.custom-file-input(type='file', aria-describedby='inputGroupFileAddon01', name='avatar')
+            label.custom-file-label(for='inputGroupFile01') Choose file
+        button.btn.btn-primary Save changes

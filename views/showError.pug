@@ -1,0 +1,19 @@
+html
+  head
+    meta( name="viewport", content="width=device-width, initial-scale=1.0")
+    title Error
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")    
+    link(rel="stylesheet", href="/custom.css")
+  body
+    .container
+      .error-wrap
+        .error.text-danger
+          .error-content
+            h2 Error:
+            span &nbsp;
+            span(style="font-size: 1.2rem;")= error.name
+          h1.error-code= error.code
+          p Here's some links that should help you get back!
+          a(href='/') Home
+          span &nbsp; &nbsp;
+          a(href='/books') Books

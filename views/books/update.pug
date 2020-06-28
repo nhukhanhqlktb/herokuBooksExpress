@@ -1,0 +1,7 @@
+extends ../layouts/common
+
+block content
+  h3 Update book
+  form.form-group.d-flex(action='/books/update/' + book.id, method='POST')
+    input.form-control(type='text', name='title', placeholder='Title', value= book.title)
+    button.btn.btn-primary.ml-2 Update

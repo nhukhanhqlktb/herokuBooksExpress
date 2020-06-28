@@ -1,0 +1,17 @@
+extends ../layouts/common
+
+block content
+  h3 Show list books in Cart 
+    a.btn.btn-primary(href='/cart/rent') Rent
+  if books.length === 0
+    p No books is selected!
+  .row
+    each book in books
+      .col-md-4.col-sm-6
+        .card()
+            img.card-img-top(src= book.coverUrl ? book.coverUrl : 'https://picsum.photos/id/1/200', style='width: 100%', alt='Card image cap')
+            .card-body
+              h5.card-title= book.title
+                span &nbsp
+                span.badge.badge-primary= book.count
+              p.card-text= book.description

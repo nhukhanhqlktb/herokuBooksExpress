@@ -1,0 +1,15 @@
+extends ../layouts/common
+
+block content
+  h3 Add User
+  if (errors)
+    each error in errors
+      p.alert.alert-danger= error
+  form(method='POST')
+    .form-group
+      input.form-control(type='text', name='name', placeholder='Name', value= values ? values.name : '')
+    .form-group
+      input.form-control(type='text', name='email', placeholder='Email', value= values ? values.email : '')
+    .form-group
+      input.form-control(type='password', name='password', placeholder='Password', value= values ? values.password : '')
+    button.btn.btn-primary Create
