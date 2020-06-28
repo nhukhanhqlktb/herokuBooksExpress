@@ -1,0 +1,13 @@
+extends ../layouts/common
+
+block content
+  h3 Create Transaction
+  select.custom-select.mb-3(name='userId', form='transactionForm')
+    each user in users
+      option(value= user.id)= user.name
+  select.custom-select.mb-3(name='bookId', form='transactionForm')
+    each book in books
+      option(value= book.id)= book.title
+  form.form-group(id='transactionForm', method='POST')
+    button.btn.btn-primary Create
+  

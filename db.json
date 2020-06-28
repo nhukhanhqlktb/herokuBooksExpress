@@ -1,0 +1,107 @@
+{
+  "books": [
+    {
+      "title": "Anh hùng điêu",
+      "description": "Kiếm hiệp",
+      "id": "QuTeD5lxO"
+    },
+    {
+      "title": "Văn học",
+      "description": "Thơ ca hiện đại",
+      "id": "w_ySqa_oy",
+      "coverUrl": "http://res.cloudinary.com/dc7hd0mjo/image/upload/v1592835346/bhnpkv7xg8zf4kvp5png.png"
+    },
+    {
+      "title": "Toán học cao cấp",
+      "description": "Thơ ca hiện đại",
+      "id": "k0V1XbJpX",
+      "coverUrl": "http://res.cloudinary.com/dc7hd0mjo/image/upload/v1592835364/h5v3iop1azkea0dnrolu.png"
+    }
+  ],
+  "users": [
+    {
+      "name": "Admin",
+      "id": "dRmtgtoiU",
+      "email": "admin@gmail.com",
+      "password": "$2b$10$rdHvQX.iN5XB4MnvGOx06exYRUWJuOxTSsZ8ZZtzop5FVnodfJcq.",
+      "isAdmin": true,
+      "avatarUrl": "http://res.cloudinary.com/dc7hd0mjo/image/upload/v1592836613/qx3wayihzba5kiagdmle.png"
+    },
+    {
+      "name": "Monkey D.Dragon",
+      "id": "ON-Opi_hI",
+      "email": "dragon@gmail.com",
+      "password": "$2b$10$rdHvQX.iN5XB4MnvGOx06exYRUWJuOxTSsZ8ZZtzop5FVnodfJcq.",
+      "avatarUrl": "http://res.cloudinary.com/dc7hd0mjo/image/upload/v1592835285/zrsosyrzi5od04sjaj7u.png"
+    },
+    {
+      "name": "Monkey D.Luffy",
+      "id": "8kfxlJqzM",
+      "email": "luffy@gmail.com",
+      "password": "$2b$10$rdHvQX.iN5XB4MnvGOx06exYRUWJuOxTSsZ8ZZtzop5FVnodfJcq.",
+      "avatarUrl": "http://res.cloudinary.com/dc7hd0mjo/image/upload/v1592756034/pvw6np5kjwkfzmyecilf.png"
+    },
+    {
+      "name": "Roronoa Zoro",
+      "id": "rzcHH0ne6",
+      "email": "zoro@gmail.com",
+      "password": "$2b$10$rdHvQX.iN5XB4MnvGOx06exYRUWJuOxTSsZ8ZZtzop5FVnodfJcq."
+    },
+    {
+      "name": "Vinsmoke Sanji",
+      "id": "TrEqWbbl_",
+      "email": "sanji@gmail.com",
+      "password": "$2b$10$rdHvQX.iN5XB4MnvGOx06exYRUWJuOxTSsZ8ZZtzop5FVnodfJcq."
+    }
+  ],
+  "transactions": [
+    {
+      "userId": "8kfxlJqzM",
+      "bookId": "LvzC5SvyQ",
+      "id": "24tN074X1",
+      "isComplete": true
+    },
+    {
+      "userId": "TrEqWbbl_",
+      "bookId": "ZCEERshFa",
+      "id": "6QLb1DJoK",
+      "isComplete": true
+    },
+    {
+      "userId": "ON-Opi_hI",
+      "bookId": "KxLuruS8N",
+      "id": "45MSRanAq",
+      "isComplete": false
+    },
+    {
+      "userId": "rzcHH0ne6",
+      "bookId": "QuTeD5lxO",
+      "id": "w-hEanFEN",
+      "isComplete": false
+    },
+    {
+      "userId": "rzcHH0ne6",
+      "bookId": "ktUDiFOqE",
+      "id": "GRfyji0Od",
+      "isComplete": false
+    },
+    {
+      "userId": "ON-Opi_hI",
+      "bookId": "ZCEERshFa",
+      "id": "fBDmBUJ3w",
+      "isComplete": false
+    }
+  ],
+  "countCookie": 4,
+  "wrongLoginCount": 2,
+  "sessions": [
+    {
+      "id": "BZ_qIO8FG",
+      "cart": {
+        "5ef41e2e893e7ac201e7e13c": 1,
+        "5ef41ea3893e7ac201e7e13d": 1
+      },
+      "userId": "5ef4496863cba8110f69b857"
+    }
+  ]
+}

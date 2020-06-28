@@ -1,0 +1,22 @@
+extends ../layouts/common
+
+block content
+  h3 Show list Users
+  table.table.table-striped
+    tr
+      th Tên tài khoản
+      th Email
+      th Update
+      th Delete
+    each user in users
+      tr
+        td= user.name
+        td= user.email
+        td
+          a(href='/users/update/' + user._id) Update
+        td
+          a(href='/users/delete/' + user._id) Delete
+  
+  a.btn.btn-primary(href='/users/create') Add User
+  p
+    include ../layouts/pagination

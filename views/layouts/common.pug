@@ -1,0 +1,34 @@
+html
+  head
+    meta( name="viewport", content="width=device-width, initial-scale=1.0")
+    title Manage Books - CodersX
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")    
+    link(rel="stylesheet", href="/custom.css")
+  body
+    .container
+      nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        a.navbar-brand(href='#') Navbar
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item.active
+              a.nav-link(href='/')
+                | Home 
+                span.sr-only (current)
+            - var user = !user ? {} : user
+            if user.isAdmin
+              li.nav-item
+                a.nav-link(href='/users') Users
+            li.nav-item
+              a.nav-link(href='/books') Books
+            li.nav-item
+              a.nav-link(href='/transactions') Transactions
+            li.nav-item
+              a.nav-link(href='/cart') Cart 
+                span.badge.badge-primary= sumBook
+            li.nav-item
+              a.nav-link(href=`/profile`)= user ? user.name : ''
+      block content
+    script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js")

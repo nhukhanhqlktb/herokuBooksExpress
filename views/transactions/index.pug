@@ -1,0 +1,18 @@
+extends ../layouts/common
+
+block content
+  h3 Show list Transactions
+  table.table.table-striped
+    tr
+      th Tên người mượn
+      th Sách mượn
+      th Trạng thái
+    each transaction in transactions
+      tr
+        td= transaction.user.name
+        td= transaction.book.title
+        td
+          a(href='/transactions/' + transaction.id + '/complete')= transaction.isComplete ? 'Đã trả' : 'Chưa trả'
+  a.btn.btn-primary(href='/transactions/create') Add Transaction
+  p
+    include ../layouts/pagination

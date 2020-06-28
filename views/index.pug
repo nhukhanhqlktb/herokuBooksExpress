@@ -1,0 +1,26 @@
+extends ./layouts/common
+
+block content
+  h3 App: Manage books
+  h5 Lession 29 - Deploy to Heroku - Bài 2 - Mở rộng app - Đang hoàn thiện
+  h5 Lession 28 - Error Handling - 
+    a(href='https://supreme-dandy-hemisphere.glitch.me/api/users') https://supreme-dandy-hemisphere.glitch.me/api/users
+  h5 Lession 27 - REST API - Bài 2
+    a(href='https://www.notion.so/JSON-WEB-TOKENS-d10c8afc3ceb4393ab199d32a4b62ff2', target='_blank') How to token (jsonwebtoken)
+  h5 Lession 25 - Giới thiệu Mongoose => Link: 
+    a(href='https://viblo.asia/p/mongoose-cho-mongodb-nodejs-Qbq5QWvJZD8', target='_blank') How to use basic
+  ol
+    li Schema cart: {} - có được không? nên để như thế nào?
+    li Thực tế ứng dụng có sử dụng _id do MongoDB sinh ra làm cookie hay không? để thao tác với data như find..? nếu không thì sử dụng gì? 
+    li nếu sử dụng _id để find thì nếu value _id truyền vào không tồn tại => gây ra lỗi do ko cast được ObjectId, nếu find bằng trường khác => empty array []
+    li Sửa lỗi không phải Admin vẫn vào được Users??
+  h5 Lession 22 - Session - Doing
+  h5 Lession 21 - File upload
+  h5 Lession 20 - Pagination - Phân trang
+  h5 Lession 18 - Environment variable - Bài tập chưa hoàn thành - SendGrid ko đăng nhập được - đã hỏi mentor
+  h5 Lession 17 - Signed Cookie
+  h5 Lession 16 - Bcrypt  
+  p  Implement rate limiter để tránh bị brute-force???
+  ol
+    li Sử dụng bcrypt để hash password của người dùng
+    li Lưu lại số lần login sai của 1 người dùng vào field wrongLoginCount để nếu họ nhập sai lần thứ 4 trở đi, hệ thống sẽ không check hash nữa mà báo lỗi luôn (cái này không phải là rate limit)

@@ -1,0 +1,7 @@
+extends ../layouts/common
+
+block content
+  h3 Update User
+  form.form-group.d-flex(action='/users/update/' + userOld.id, method='POST')
+    input.form-control(type='text', name='name', placeholder='Name', value= userOld.name)
+    button.btn.btn-primary.ml-2 Update
