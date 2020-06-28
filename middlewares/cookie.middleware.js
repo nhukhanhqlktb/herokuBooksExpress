@@ -7,7 +7,7 @@ module.exports.setCookie = function (req, res, next) {
     db.set('countCookie', 0).write();
     console.log(`<cookie>:<0>`);
   } else {
-    db.set('countCookie', currentCountCookie + 1).write();
+    // db.set('countCookie', currentCountCookie + 1).write();
     // console.log(`<cookie>:<${currentCountCookie + 1}>`);
   }
   next();
